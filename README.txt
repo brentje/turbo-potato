@@ -14,6 +14,11 @@ General Information:
 
 This application will process JSON files containing story elements, to be played back to end users.  General features of the system are that it will allow authors to define replacement fields that they can use within their story to name items or record other user input; allow authors to prompt end users with choices that will define where they go in the story; allow end users to save their progress before a choice is made; allow end users to control the reading speed for the story; and others that are detailed within this document.
 
+To run this application after filling out the necessary configuration files, simply run:
+
+python game.py
+
+
 File Descriptions:
 
 tmas.py - the main python file containing the story classes used for controlling playback and user interation.
