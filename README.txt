@@ -217,7 +217,7 @@ Message text can be broken up by inserting \n whenever the author wants a line b
 
 See the stories folder for a valid example file to start with.
 
-Flags and flag values used by the system to denote different response type:
+Flags and flag values used by the system to denote different response types:
 
 ENDRESPONSE = 0 --used to end the story and quit from the application.
 STARTRESPONSE = 1 --used to confirm restarting the story and moving back to the first step, as denoted within the tmasconfig.json file.
