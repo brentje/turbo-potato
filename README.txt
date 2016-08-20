@@ -213,7 +213,7 @@ This file is a standard JSON file containing the fields required by the system i
 
 Authors can create the stories one step at a time, allowing the author the chance to either receive text input from the user, or give the user preset choices to select from that will direct where they go to next within the story.  Authors can also create steps that will simply display it's message and move onto the next step.
 
-Message text can be broken up by inserting \n whenever the author wants a line break.  The messengerapp.pi program is designed to break messages into separate parts wherever it find \n, and send each part to the user with a calculated delay based on the reading speed value.
+Message text can be broken up by inserting \n whenever the author wants a line break.  The messengerapp.py program is designed to break messages into separate parts wherever it find \n, and send each part to the user with a calculated delay based on the reading speed value.
 
 See the stories folder for a valid example file to start with.
 
