@@ -31,12 +31,15 @@ import logging.handlers
 import sys
 import os
 
-from flask import request, Response
-
 from tmas import StoryController
 
 from kik import KikApi, Configuration
 from kik.messages import messages_from_json, TextMessage, SuggestedResponseKeyboard, TextResponse, StartChattingMessage, PictureMessage, LinkMessage, ScanDataMessage, StickerMessage, FriendPickerMessage, UnknownMessage
+
+HTTPFORBIDDEN = 403
+HTTPNOTFOUND = 404
+HTTPOK = 200
+
 
 class MessengerApp(object) :
     def __init__(self, name = ''):
@@ -101,19 +104,36 @@ class MessengerApp(object) :
     	self.logger.debug('initKik called.')
 
         try : 
-            self.kik = KikApi(self._config['user'], self._config['apikey'])
-            self.kik.set_configuration(Configuration(webhook=self._config['webhook']))
 
-        except:
+        	if os.environ.get('KIK_USER') and os.environ.get('KIK_API_KEY') :
+        		self.kik = KikApi(os.environ['KIK_USER'], os.environ['KIK_API_KEY'])
+        	else :
+				self.kik = KikApi(self._config['kikuser'], self._config['kikapikey'])
+
+	        if os.environ.get('WEBHOOK') :
+	        	self.kik.set_configuration(Configuration(webhook=os.environ['WEBHOOK']))
+	        else :
+	        	self.kik.set_configuration(Configuration(webhook=self._config['webhook']))
+
+        except :
             self.logger.error('Cannot connect to KiK: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1]))
             raise
 
 
-    def processResponse(self, request) :
+    def processRequest(self, request) :
     	self.logger.debug('processResponse called.')
 
+    	if request.headers.get('X-Kik-Signature') :
+            return self.getResponse(request)
+        else :
+        	return HTTPFORBIDDEN
+
+
+    def getResponse(self, request) :
+    	self.logger.debug('getKikResponse called.')
+
         if not self.kik.verify_signature(request.headers.get('X-Kik-Signature'), request.get_data()):
-            return Response(status=403)
+            return HTTPFORBIDDEN
 
         #message received by the user
         messages = messages_from_json(request.json['messages'])
@@ -122,7 +142,9 @@ class MessengerApp(object) :
         package = []
 
         #print '\nReceived user message: ' + message.body + '\n'
-        resData = []   
+        resData = []
+
+        httpResponse = ""
         
         try :
             for message in messages:       
@@ -200,4 +222,4 @@ class MessengerApp(object) :
         except :
             self.logger.warn('Unexpected error: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1]))
 
-        return Response(status=200)
+        return HTTPOK

@@ -1,3 +1,12 @@
+19/08/2016 - tmas v0.11a
+
+Changes:
+1: Updated messengerapp.py and config to allow for the use of 
+server variables, in preparation for deployment to a proper
+hosting facility.
+2: Update messenger request processing functions, in preparation
+for splitting this off into separate messaging platform apps.
+
 19/08/2016 - tmas v0.1a
 
 First alpha release.

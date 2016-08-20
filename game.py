@@ -1,6 +1,8 @@
 ##############################################################################
 ##
-## Kik Bot framework.
+## game.py - Flask wrapper application, for interacting with various messenger 
+##           apps.
+##
 ## Copyright (C) 2016  Brent.Englehart@gmail.com
 ##
 ## This program is free software; you can redistribute it and/or
@@ -25,16 +27,22 @@ from messengerapp import MessengerApp
 
 app = Flask(__name__)
 
-messengerApp = MessengerApp('Kik Messenger App')
+messengerApp = MessengerApp('Messenger App')
+
+@app.route('/incoming', methods=['GET'])
+def verify():
+
+    return Response(response="Hello world", status=200)
 
 @app.route('/incoming', methods=['POST'])
 def incoming():
-    
+
     try :
-        return messengerApp.processResponse(request)
+        return Response(status=messengerApp.processRequest(request))
     except:
         print 'Error: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1])        
         return Response(status=403)
+
     
 
 if __name__ == '__main__':
