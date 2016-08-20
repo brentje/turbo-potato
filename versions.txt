@@ -1,0 +1,3 @@
+19/08/2016 - tmas v0.1a
+
+First alpha release.

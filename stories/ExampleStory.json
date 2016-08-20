@@ -1,0 +1,104 @@
+{
+    "step": [
+        {
+            "id":  0, 
+            "message": "OK, bye for now!  To restart again, just say Hi.", 
+            "responsetype":  0, 
+            "nextstep": 100 
+        },
+        {
+           "id":  1,
+           "message": "Returning to main menu...", 
+           "responsetype":  6 
+        },
+        {
+           "id":  2, 
+           "message": "Returning to last save point...", 
+           "responsetype":  5 
+        },
+        {
+           "id":  3, 
+           "message": "Restarting the story...",
+           "responsetype":  1, 
+           "nextstep": 100
+        },
+        {
+           "id":  100,
+           "message": "What's your name?",
+           "responsetype":  3, 
+           "responsefield": "$ourHero",   
+	       "nextstep": 101
+        },
+        {
+            "id":  101,
+            "message": "\"Are you sure that your name is $ourHero?\"",
+            "responsetype":  2, 
+            "responses": [
+                {
+                    "response": "Yes, that's definitely my name", 
+                    "nextstep": 102                               
+                },
+                {
+                    "response": "No, sorry, I mis-spoke.",
+                    "nextstep": 100
+                }
+            ]
+        },
+        {
+            "id":  102,
+            "message": "Do you like that name?",
+            "responsetype":  2, 
+            "responses": [
+                {
+                    "response": "Yes, it's a great name!", 
+                    "nextstep": 200                               
+                },
+                {
+                    "response": "No, my parents didn't like my very much.",
+                    "nextstep": 300
+                }
+            ]
+        },
+        {
+            "id": 200,
+            "message": "Great to hear.",
+            "responsetype":  4, 
+            "nextstep": 900
+        },
+        {
+            "id": 300,
+            "message": "That's a shame.",
+            "responsetype":  4,
+            "nextstep": 900
+        },
+        {
+            "id": 900,
+            "message": "Well it was nice meeting you.\nHave a nice day.",
+            "responsetype":  4,
+            "nextstep": 999
+        },     
+        {
+            "id":  999,
+            "message": "Well that was fun. Want to try again?",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "I want to restart.",
+                    "nextstep": 3
+                },
+                {
+                    "response": "I want to go back to my last save point.",
+                    "nextstep": 2
+                },                
+                {
+                    "response": "I want a new story.",
+                    "nextstep": 1
+                },                 
+                {
+                    "response": "I've had enough for now.",
+                    "nextstep": 0
+                }
+            ]
+        }  
+    ]
+}

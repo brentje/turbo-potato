@@ -1,0 +1,844 @@
+{
+    "step": [
+        {
+            "id":  0,
+            "message": "OK, bye for now!  To restart again, just say Hi.",
+            "responsetype":  0,
+            "nextstep": 100
+        },
+        {
+           "id":  1,
+           "message": "Returning to main menu...",
+           "responsetype":  6
+        },
+        {
+           "id":  2,
+           "message": "Returning to last save point...",
+           "responsetype":  5
+        },
+        {
+           "id":  3,
+           "message": "Restarting the story...",
+           "responsetype":  1,
+           "nextstep": 100
+        },
+        {
+           "id":  100,
+           "message": "A strong handsome man with curly golden locks falling before his steel blue eyes strides up on horseback on the road towards the town with an entourage of guards.\nAt the town gates, he is met by a tall burly man with a smile. \"Welcome to the Kingdom of Goosbey. What's your name, good sir?\"",
+           "responsetype":  3,
+           "responsefield": "$ourHero",
+	       "nextstep": 800
+        },
+        {
+            "id":  101,
+            "message": "\"And what brings you to our fair city?\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Kill everyone!",
+                    "nextstep": 900
+                },
+    	        {
+                    "response": "Propose to the princess.",
+                    "nextstep": 102
+                }
+            ]
+        },
+        {
+            "id":  102,
+            "message": "It was getting close to $ourHero's coming of age, when a young man decides to take a bride and settle down as he prepares to take the throne. And at nearly 35, it was about damn time.\nSince he was the prince of the nearby Kingdom of Nor'Shor, it was his right to choose any woman in the land as his queen.\nBut as it was, there was no need to search for her since there was only one woman in his heart. She was the most beautiful woman he had ever seen.\nIn fact, she was the most beautiful woman anyone had ever seen. The only problem was that Princess Lisa has had her heart broken more times then Roy the Blacksmith had been caught in the barn doing...things, so she was skeptical of any man bearing gifts and kind words.\nHe wonders whether he should immediately propose to Princess Lisa while he still has some strength left in his voice, or hit the tavern for some liquid courage.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Immediately propose.",
+                    "nextstep": 103
+                },
+                {
+                    "response": "Lets get shots!",
+                    "nextstep": 901
+                }
+            ]
+        },
+        {
+            "id":  103,
+            "message": "$ourHero approached the palace with his guards carrying flowers, baskets of fruit, and jewels of all shapes and colours, including a 13 carat diamond sitting precariously on top of a ring.\nPrincess Lisa leans against the railing front courtyard breakfast nook. She calls down to the prince \"And what the f*** do you want?\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Abort and bail.",
+                    "nextstep": 902
+                },
+                {
+                    "response": "Kill everyone!",
+                    "nextstep": 900
+                },
+	            {
+                    "response": "Power through the proposal.",
+                    "nextstep": 104
+                }
+            ]
+        },
+        {
+            "id":  104,
+            "message": "He dismounts from his horse and speaks with a slight crack in his voice. \"My dearest Lisa, fairest in all the land, sweeter then the sweetest mountain air...\"\n\"I didn't say spout off a bunch of bulls***, I said what the f*** do you want?\", she interrupted.\"\n\"Oh\", he stumbled. \"Um, I want to marry you?\"\n\"Oh really\", she said sharply as she begins to walk down the stairs towards the now rather nervous prince. \"And what could you possibly offer me?\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Show off your gifts.",
+                    "nextstep": 105
+                },
+                {
+                    "response": "Show what you bring to the party!",
+                    "nextstep": 903
+                }
+            ]
+        },
+        {
+            "id":  105,
+            "message": "\"Well...\", as he motioned towards the rather large pile of gifts that he brought.\n\"That's nice. What else you got?\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Present the ring.",
+                    "nextstep": 106
+                },
+	            {
+                    "response": "Present the stable boy.",
+                    "nextstep": 904
+                }
+            ]
+        },
+        {
+            "id":  106,
+            "message": "\"My dear, please accept this ring as a token of my love\", as he gets down on one knee and presents the impressive diamond engagement ring to her.\nShe snatches it out of his hand, examining it and seeing how it looked on her finger. \"Hmmm...pretty. A little gaudy, but pretty. What else?\"\n\"What do you mean?\", he asked with confused look.\n\"You bring all this stuff, which is nice and all, but what else do you have to offer me?\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "\"I'm a freakin' prince!\"",
+                    "nextstep": 107
+                },
+                {
+                    "response": "NOW present the stable boy.",
+                    "nextstep": 904
+                }
+            ]
+        },
+        {
+            "id":  107,
+            "message": "\"I'm a freakin' prince fer christ sake! I want to make you my queen! Any other woman would jump at the chance! What else could you possibly want?!\", he said with a crackling strain in his voice.\n\"Look, I've already had 2 princes and half of the Northern Army proclaim their undying love for me this week.\"\n\"Any man can bring me gifts like these. There's nothing special about them, and so far there's nothing special about you\", she said with a condesending look in her eye.\n\"If you want to win my heart, you have to go there...\" as she points towards the mountains.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "\"The witch's house?!\"",
+                    "nextstep": 108
+                },
+                {
+                    "response": "\"The market at Krappytyre?\"",
+                    "nextstep": 109
+                }
+            ]
+        },
+		{
+            "id":  108,
+            "message": "\"You mean...the witch's house?!\" $ourHero said.\n\"Yes,\" she said, \"you have to go through the Forest Of Suffering, across the Lake Of Unending Pain, and retrieve the Orchid Of Enduring Beauty from the evil witch that lives in the mountains. When you bring me that, you will have proven yourself worthy and I will be your queen.\"\n\"Couldn't I just buy you one? They sell them down at Krappytyre you know...my cousin can get me a discount.\"\n\"NO! AND, I'll know if you just bought it. You must retrieve the one from the evil witch in order to prove yourself to me\" she said demandingly. \"And you cannot bring any guards with you. You must go alone.\"",
+            "responsetype":  2,
+            "responses": [
+    	        {
+                    "response": "Retrieve the orchid!",
+                    "nextstep": 200
+                },
+                {
+                    "response": "Uuuuuuuuuuuh....yeah, no.",
+                    "nextstep": 905
+                }
+            ]
+        },
+    	{
+            "id":  109,
+            "message": "\"The market at Krappytyre?\" $ourHero said.\n\"No, you insolent dumbass,\" she said, \"you have to go through the Forest Of Suffering, across the Lake Of Unending Pain, and retrieve the Orchid Of Enduring Beauty from the evil witch that lives in the mountains. When you bring me that, you will have proven yourself worthy and I will be your queen.\"\n\"Couldn't I just buy you one? They sell them down at Krappytyre you know...my cousin can get me a discount.\"\n\"Absolutely NOT! AND, I'll know if you just bought it. You must retrieve the one from the evil witch in order to prove yourself to me\" she said demandingly. \"You cannot bring any guards with you. You must go alone. And for being a dumbass, no sword either.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Ditch this bitch.",
+                    "nextstep": 905
+                },
+                {
+                    "response": "Retrieve the orchid!",
+                    "nextstep": 300
+                }
+            ]
+        },
+        {
+            "id":  200,
+            "message": "\"You don't ask for too much, now do you?\" he said as he walked away dejected. \"This had better be the best damn freakin' wedding night in all of history, that's all I got to say...\" he thought. So he packed up some supplies and his trusty sword, and set off to retrieve the Orchid Of Enduring Beauty from the evil witch that lives in the mountains.\nAs he enters the Forest Of Suffering, he felt an eerie shadow fall upon him. It was like the trees had eyes and they were all watching him, waiting for him let his guard down.\nHe felt the same way he did at the last family reunion, only the trees didn't whisper to each other about that time he was caught behind the barn with the stable boy and the riding crop.\nHe was cautiously walking along when he heard a faint whimpering. He search around until he found a monkey tangled in a trap.",
+            "responsetype":  2,
+            "responses": [
+	           {
+                    "response": "Help the pathetic thing.",
+                    "nextstep": 201
+                },
+                {
+                    "response": "Don't got time for this.",
+                    "nextstep": 906
+                }
+            ]
+        },
+        {
+            "id":  201,
+            "message": "\"But it looks so pathetic...\", so he cut it free from the trap.\n\"OH THANK YOU THANK YOU THANK YOU FOR SAVING ME FROM THAT TRAP YOU KIND PERSON!\", the monkey said as it jumped around joyfully.\n\"HOLY CRAP! A talking monkey!\", he squealed as he drew his sword.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "KILL IT! KILL IT NOW!",
+                    "nextstep": 907
+                },
+    	        {
+                    "response": "Wait...let it speak more.",
+                    "nextstep": 202
+                }
+            ]
+        },
+        {
+            "id":  202,
+            "message": "\"WAIT! NO!\" the monkey shrieked as it cowarded in front of him. \"I can help you!\"\n\"Oh, how so?\", he asked, his arms beginning to quiver as he was still holding the sword above his head.\n\"Well, you're in the Forest Of Suffering for a reason. You must be on some sort of quest.\"\n\"Yeah. I'm going to retrieve the Orchid Of Enduring Beauty from the evil witch in the mountains.\" he proudly stated.\n\"Oh...I can help! I know these woods well, and I know how to get to the witch's house.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Don't need no help.",
+                    "nextstep": 908
+                },
+                {
+                    "response": "Let the monkey join you.",
+                    "nextstep": 203
+                }
+            ]
+        },
+        {
+            "id":  203,
+            "message": "\"Hmmmm...well, I could use a guide. Plus it wouldn't hurt to have a sacrifice for the witch, just in case\", he thought. \"Alright, you can come along\", he stated as he put away his sword. \"What's your name anyways?\"\n\"My name is Cherie\", the monkey announced.\n\"I'm $ourHero, the prince of the nearby Kingdom of Nor'Shor. Pleasure to meet you.\" he said. \"So since you're from around here, why do they call this the Forest Of Suffering anyways?\"\n\"Legend has it that a man and wife once lived in these woods. The wife was horrendously evil to the man, constantly nagging him, making him do all sorts of nasty things like kiss her feet after she's walked through horse s***.\"\n\"But he loved her and did everything she asked of him. When she died, he took her ashes and spread them throughout the forest before throwing himself off the cliff because he was so sorrowful.\"\n\"They say that she still haunts these woods, making people so sad that they throw themselves from the same cliff. If you listen closely, you can still here her nagging and calling his name.\" she explained.\n\"Really? That's awful...\" he said.\n\"Yeah. I don't know if it's true, but mostly we keep the story going to keep out the riff-raff. It seems to work pretty good, except for the occasional fool on a quest.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "I ain't afraid of no ghost.",
+                    "nextstep": 204
+                },
+                {
+                    "response": "Screw this...",
+                    "nextstep": 909
+                }
+            ]
+        },
+        {
+            "id":  204,
+            "message": "\"Well, I can't let a nagging ghost stop me. I must retrieve the Orchid Of Enduring Beauty for my darling Lisa.\" he said with renewed determination.\nThey journeyed through the Forest Of Suffering, bantering back and forth about the finer points of courting etiquette and how to get s*** out of fur.\nAfter what seemed like days of walking, even though it was more like an hour and a half, they came to the Lake Of Unending Pain. It was the most amazing sight ever conceived, short of the sight of his beautiful Princess Lisa.\nThe lake was edged with the most colourful lilacs and roses, with a spectacular waterfall flowing into sparkling blue water that shimmered as the sun danced playfully across the surface.\n\"This is the Lake Of Unending Pain?\" he said with a quizzical look. \"This doesn't look so bad. I bet I could swim across easily.\"",
+            "responsetype":  2,
+            "responses": [
+    	        {
+                        "response": "Go for it!",
+                        "nextstep": 910
+                },
+                {
+                        "response": "Something doesn't seem right, here...",
+                        "nextstep": 205
+                }
+            ]
+        },
+    	{
+            "id":  205,
+            "message": "Standing next to the lake, he wondered why this was called the 'Lake Of Unending Pain' when it looked so beautiful.\nJust then a lone swan gracefully swooped down and landed in the middle of the lake, at which point a nasty creature that looked like a massive penquin with razor sharp teeth sprang out of the water and gobbled up the swan whole. It came crashing back into the water sending waves every which way.\n\"Oh...\" he said. \"Well crap. How the hell am I suppose to get across with those things in the lake?\"\n\"Don't worry,\" Cherie said, \"it's simply. Us monkeys have been crossing this lake for years. Trust me.\"",
+            "responsetype":  2,
+            "responses": [
+	           {
+                    "response": "Trust the monkey.",
+                    "nextstep": 206
+                },
+                {
+                    "response": "Don't trust the monkey...",
+                    "nextstep": 911
+                }
+            ]
+        },
+        {
+            "id":  206,
+            "message": "He decides to see what the monkey has planned. She runs back to the woods and grabs a long vine. Then on her way back, she spots a rabbit in the meadow and bashes the little bastard over the head with a rock. She ties the vine around the now dead rabbit's neck, and hands the other end of the vine to $ourHero.\n\"See that big piece of wood over there\", she says as she points to a log. \"Get on it, and get a good grip. And whatever you do, DON'T LET GO!\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Bail on the monkey.",
+                    "nextstep": 912
+                },
+                {
+                    "response": "Keep trusting the monkey...",
+                    "nextstep": 207
+                }
+            ]
+        },
+        {
+            "id":  207,
+            "message": "Confused, he does what the monkey says even though he should know better. He positions himself crouched on the log, holding onto a branch strongly with one hand and the vine in the other.\n\"Ready?\", Cherie says.\n\"I guess...\", he says, still wondering what the hell the monkey is planning.\nThe monkey jumps onto his back and drifts the dead rabbit into the water as far as she can. It plops into the water about 20 feet from shore.\n\"What the hell was the point of all that if you're just going t...\", was all he managed to get out before the vine went taut. They were pulled at break-neck speeds as a penquin-beast dragged them around the lake trying to free its treat from the vine, and $ourHero finally clued in to the plan.\n\"HOLY JESUS GOAT F***ING CHRIST!\" screamed $ourHero.\n\"WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!\" shouted Cherie gleefully.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Keep holding on.",
+                    "nextstep": 208
+                },
+                {
+                    "response": "Let go of the vine.",
+                    "nextstep": 408
+                }
+            ]
+        },
+        {
+            "id":  208,
+            "message": "Just as $ourHero was about to lose his grip on the vine, the penquin beast whipped violently to the right just before the opposite shore, sending both of them flying. The monkey landed safely in a pile of leaves. $ourHero nailed a tree before landing upside-down in a rose bush.\n\"YOU STUPID GODDAMN CRAZY MONKEY!!!\" he shouted as he picked himself up, pulling thorns out of his skin. \"You could have gotten us KILLED!\"\n\"But I didn't. And we made it to the other side. So what are you complaining about?\" she said with a why-are-you-so-ungrateful look on her face.\n\"Next time WARN ME if you're going to do something as stupid as that!\" he said.\n\"Well if I did that, then you wouldn't have gone along with it.\" she rebutted.\n\"I DON'T CARE! Just warn me!\" he restated.\n\"Alright, if that's what you want...\" she said.\nThey climbed the mountain for the rest of the day, avoiding the occasional boulder making its way to the bottom. The boulders were very polite about it, exchanging pleasantries as they passed.",
+            "responsetype":  2,
+            "responses": [
+    	        {
+                    "response": "Keep climbing.",
+                    "nextstep": 914
+                },
+                {
+                    "response": "Camp for the night.",
+                    "nextstep": 209
+                }
+            ]
+        },
+        {
+            "id":  209,
+            "message": "They reached a small plateau and setup camp for the night.\nHe was awoken in the middle of the night by an eerie laugh.\n\"EEEEH HEH HEH HEH HEH HEH HEH! Come to me, my precious...\" was all he heard before seeing stars, followed by blackness.\nThe blackness wasn't because it was night, it was because he was bashed in the head with a mallet. I thought this was an important thing to point out, since the night doesn't hurt like hell.\nHe awoke to a splitting headache and the sight of a very ugly woman. Fortunately after years of training in night clubs, he was accustomed to both.\nHe looked around and saw that he was in a small hut decorated with deer antlers, buck skin paintings, and the souls of the brave and foolhearty, plus a few Northern Army regiment badges.\nHe couldn't see much else because it was dimly lit with 3 small candles. And he was tied spread-eagle to the bed, so that limited his view a little.\n\"Aaah, my precious is awake\" she said with a slight cackle.",
+            "responsetype":  2,
+            "responses": [
+	           {
+                    "response": "Why Am I here?",
+                    "nextstep": 210
+                },
+                {
+                    "response": "\"You want some of this?\"",
+                    "nextstep": 915
+                }
+            ]
+        },
+        {
+            "id":  210,
+            "message": "\"Why have you brought me here, you vile creature? What are you going to do to me?\" he said in a voice braver then he felt.\n\"So many questions from one in a position to ask very little. You should be more patient, my precious.\" She went back to mixing ingredients into a bowl muttering what sounded like gibberish.\n\"Flügel des Hiebes und Auge von newt. Beruhigen das gas und stoppen das toot!\" she said as a puff of smoke rose from the bowl. She continue stirring.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "NOW try \"You want some of this?\"",
+                    "nextstep": 915
+                },
+                {
+                    "response": "Accept your fate.",
+                    "nextstep": 211
+                }
+            ]
+        },
+    	{
+            "id":  211,
+            "message": "\"pssst...\", $ourHero heard from behind the bed. He turned to look.\n\"CHERIE!\" he whispered excitedly. \"Am I glad to see you for a change.\"\nShe moved quickly to untie $ourHero, making sure she wasn't spotted by the witch.\n\"Stay here and pretend you're still tied up. Oh, and consider yourself warned\" she whispered.\n\"Why?? What are you going to do?\" he snapped.\n\"Hey, you said warn, not explain...\"",
+            "responsetype":  2,
+            "responses": [
+    	        {
+                    "response": "Trust the monkey.",
+                    "nextstep": 212
+                },
+                {
+                    "response": "You got this. It'll be fine.",
+                    "nextstep": 916
+                }
+            ]
+        },
+        {
+            "id":  212,
+            "message": "Before he knew it, Cherie was behind the witch holding a mallet above her head. Just as she was about to bring the mallet down, the witch spun around and pulled out...a silver button.\n\"OOOO, shiny!\" Cherie said with joy as she dropped the mallet and grabbed the button.\n\"Stupid monkey\" $ourHero said. While the witch was distracted, he jumped up and drew his sword. Unfortunately the ceiling was lower then he expected, and the sword jammed into the wood.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Forget the sword, grab the orchid.",
+                    "nextstep": 917
+                },
+                {
+                    "response": "I MUST FREE MY SWORD!",
+                    "nextstep": 213
+                }
+            ]
+        },
+        {
+            "id":  213,
+            "message": "\"Why have you come all this way just to do an old woman harm?\" the witch asked as he struggled to free the sword.\n\"I have not come to do you harm. I come for the Orchid Of Enduring Beauty,\" he said.\n\"You mean this?\" she said as she dusted off a glass box with a wooden base. \"Why would you want my old Orchid Of Enduring Beauty? They sell them down at Krappytype you know.\"\n\"I am on a quest to in order to prove my love for a princess,\" he stated proudly.\n\"I once knew love,\" she said sadly. \"Then one day I go to visit my sister, leaving a nice plump pig on the bed for my husband so that he wouldn't starve while I was away. By the time I got back, the dumbass had fallen off a cliff. I always knew he'd get himself killed if I wasn't around to keep him in line.\"\nShe looked at $ourHero with a coy smile. \"Tell you what...I will give you the Orchid Of Enduring Beauty. But first you must give me a kiss. You must kiss me as passionately as you would your princess, so that I may touch love once more.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "I REALLY MUST FREE MY SWORD!",
+                    "nextstep": 214
+                },
+                {
+                    "response": "Throw the potion on the witch.",
+                    "nextstep": 918
+                }
+            ]
+        },
+        {
+            "id":  214,
+            "message": "$ourHero struggled even more desperately with the sword. He soon realised it was pointless, and that he'd have to kiss the witch. \"Alright, I will kiss you, but you must close your eyes first.\"\n\"Oh good!\" she said, primping herself and puckering up.\n\"Oh god...\" $ourHero said as he shuddered in fear.\n\"Shiny pretty\" Cherie said, gently stroking the button.\nThe witch slowly approached $ourHero, eyes close, lips puckered, head tilted up and to the right. Her oily forehead glissened in the candle light. He could see directly up her nostrals. It was like looking into a hairy forest of despair.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Kiss the witch.",
+                    "nextstep": 919
+                },
+                {
+                    "response": "Use the monkey.",
+                    "nextstep": 215
+                }
+            ]
+        },
+        {
+            "id":  215,
+            "message": "Just as their lips were about to meet, $ourHero grabbed the monkey by the scruff of the neck and planted her right into the witch's waiting pucker. In the confusion, he swiped the Orchid Of Enduring Beauty and grabbed Cherie by the tail, bolting out the front door.\n\"Thanks for the evening, I had a wondeful time!\" he shouts back pavlovianly, sliding down the mountain path. They made their way back down the mountain, to the Lake Of Unending Pain. Standing at the edge of the lake, $ourHero wondered if there was a better way across.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Trust the monkey.",
+                    "nextstep": 217
+                },
+                {
+                    "response": "Explore around the lake.",
+                    "nextstep": 216
+                }
+            ]
+        },        
+        {
+            "id":  216,
+            "message": "$ourHero decided to walk around the edge of the lake towards the waterfall.\n\"I got the vine! Just let me find a rabbit now...\" Cherie said gleefully.\n$ourHero noticed a path leading behind the falls.\"Hey...where does this path behind the falls lead?\" he asked the monkey.\n\"Oh that. That's just the shortcut to the other side of the lake.\" Cherie replied. \n\"Wait. You mean to tell me that there was a PATH to get to the other side of the lake? Why don't we just take the path instead of risking our lives with the damn penguins???\"\n\"Because that's not the fun way to get across...duh.\" the monkey said as she flicked her finger off her forehead. \"Now take this vine.\"\n\"I'M NOT TAKING THE F***ING VINE!\" $ourHero growled. \"We're taking the nice easy path, not dealing with f***ing penguins, and the rest of this trip is going to go smoothly...got it?\"\n\"Well you're no fun.\" Cherie said as she tossed aside a dead rabbit. They casually walked along the path behind the waterfalls, and down towards the meadow on the other side of the lake.",
+            "responsetype":  4,
+            "nextstep": 600
+        },                
+        {
+            "id":  217,
+            "message": "$ourHero brushed off his doubts, trusting the monkey as she hadn't technically let him down yet.\n\"I got the vine! Just let me find a rabbit now...\" Cherie said gleefully. $ourHero found a sturdy log to hold onto for the trip.\n\"Here, hold this vine.\" Cherie said as she wound up to throw the rabbit. The rabbit plopped into the lake and sunk for two seconds before the penguin grabbed it's treat and yanked them around the lake again, until $ourHero's grip slipped and they were thrown towards the bushes on the other side of the lake. $ourHero still nailed a tree but at least the monkey hit the rose bush this time, so that made him feel better." ,
+            "responsetype":  4,
+            "nextstep": 600
+        },           
+        {
+            "id":  300,
+            "message": "\"You don't ask for too much, now do you?\" he said as he walked away dejected. \"This had better be the best damn freakin' wedding night in all of history, that's all I got to say...\" he thought. So he packed up some supplies and his crappy daggar that he never uses since the sword is so much cooler, and set off to retrieve the Orchid Of Enduring Beauty from the evil witch that lives in the mountains.\nAs he enters the Forest Of Suffering, he felt an eerie shadow fall upon him. It was like the trees had eyes and they were all watching him, waiting for him let his guard down.\nHe felt the same way he did at the last family reunion, only the trees didn't whisper to each other about that time he was caught behind the barn with the stable boy and the riding crop. He was cautiously walking along when he heard a faint whimpering. He search around until he found a monkey tangled in a trap.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Don't got time for this.",
+                    "nextstep": 906
+                },
+                {
+                    "response": "Help the pathetic thing.",
+                    "nextstep": 301
+                }
+            ]
+        },
+        {
+            "id":  301,
+            "message": "\"But it looks so pathetic...\", so he cut it free from the trap.\n\"OH THANK YOU THANK YOU THANK YOU FOR SAVING ME FROM THAT TRAP YOU KIND PERSON!\", the monkey said as it jumped around joyfully.\"HOLY CRAP! A talking monkey!\", he squealed as he drew his daggar.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "KILL IT! KILL IT NOW!",
+                    "nextstep": 907
+                },
+                {
+                    "response": "Wait...let it speak more.",
+                    "nextstep": 302
+                }
+            ]
+        },
+        {
+            "id":  302,
+            "message": "\"WAIT! NO!\" the monkey shrieked as it cowarded in front of him. \"I can help you!\"\n\"Oh, how so?\", he asked, still holding the daggar above his head.\n\"Well, you're in the Forest Of Suffering for a reason. You must be on some sort of quest.\"\n\"Yeah. I'm going to retrieve the Orchid Of Enduring Beauty from the evil witch in the mountains.\" he proudly stated.\n\"Oh...I can help! I know these woods well, and I know how to get to the witch's house.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Don't need no help.",
+                    "nextstep": 908
+                },
+                {
+                    "response": "Let the monkey join you.",
+                    "nextstep": 303
+                }
+            ]
+        },
+        {
+            "id":  303,
+            "message": "\"Hmmmm...well, I could use a guide. Plus it wouldn't hurt to have a sacrifice for the witch, just in case\", he thought. \"Alright, you can come along\", he stated as he put away his daggar. \"What's your name anyways?\"\n\"My name is Cherie\", the monkey announced.\n\"I'm $ourHero, the prince of the nearby Kingdom of Nor'Shor. Pleasure to meet you.\" he said. \"So since you're from around here, why do they call this the Forest Of Suffering anyways?\"\n\"Legend has it that a man and wife once lived in these woods. The wife was horrendously evil to the man, constantly nagging him, making him do all sorts of nasty things like kiss her feet after she's walked through horse s***.\"\n\"But he loved her and did everything she asked of him. When she died, he took her ashes and spread them throughout the forest before throwing himself off the cliff because he was so sorrowful.\"\n\"They say that she still haunts these woods, making people so sad that they throw themselves from the same cliff. If you listen closely, you can still here her nagging and calling his name.\" she explained.\n\"Really? That's awful...\" he said.\n\"Yeah. I don't know if it's true, but mostly we keep the story going to keep out the riff-raff. It seems to work pretty good, except for the occasional fool on a quest.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "I ain't afraid of no ghost.",
+                    "nextstep": 304
+                },
+                {
+                    "response": "Screw this...",
+                    "nextstep": 909
+                }
+            ]
+        },
+        {
+            "id":  304,
+            "message": "\"Well, I can't let a nagging ghost stop me. I must retrieve the Orchid Of Enduring Beauty for my darling Lisa.\" he said with renewed determination.\nThey journeyed through the Forest Of Suffering, bantering back and forth about the finer points of courting etiquette and how to get s*** out of fur.\nAfter what seemed like days of walking, even though it was more like an hour and a half, they came to the Lake Of Unending Pain. It was the most amazing sight ever conceived, short of the sight of his beautiful Princess Lisa.\nThe lake was edged with the most colourful lilacs and roses, with a spectacular waterfall flowing into sparkling blue water that shimmered as the sun danced playfully across the surface.\n\"This is the Lake Of Unending Pain?\" he said with a quizzical look. \"This doesn't look so bad. I bet I could swim across easily.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Go for it!",
+                    "nextstep": 910
+                },
+                {
+                    "response": "Something doesn't seem right, here...",
+                    "nextstep": 305
+                }
+            ]
+        },
+        {
+            "id":  305,
+            "message": "Standing next to the lake, he wondered why this was called the 'Lake Of Unending Pain' when it looked so beautiful.\nJust then a lone swan gracefully swooped down and landed in the middle of the lake, at which point a nasty creature that looked like a massive penquin with razor sharp teeth sprang out of the water and gobbled up the swan whole. It came crashing back into the water sending waves every which way.\n\"Oh...\" he said. \"Well crap. How the hell am I suppose to get across with those things in the lake?\"\n\"Don't worry,\" Cherie said, \"it's simply. Us monkeys have been crossing this lake for years. Trust me.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Trust the monkey.",
+                    "nextstep": 306
+                },
+                {
+                    "response": "Don't trust the monkey...",
+                    "nextstep": 911
+                }
+            ]
+        },
+        {
+            "id":  306,
+            "message": "He decides to see what the monkey has planned. She runs back to the woods and grabs a long vine. Then on her way back, she spots a rabbit in the meadow and bashes the little bastard over the head with a rock. She ties the vine around the now dead rabbit's neck, and hands the other end of the vine to $ourHero.\n\"See that big piece of wood over there\", she says as she points to a log. \"Get on it, and get a good grip. And whatever you do, DON'T LET GO!\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Bail on the monkey.",
+                    "nextstep": 912
+                },
+                {
+                    "response": "Keep trusting the monkey...",
+                    "nextstep": 307
+                }
+            ]
+        },
+        {
+            "id":  307,
+            "message": "Confused, he does what the monkey says even though he should know better. He positions himself crouched on the log, holding onto a branch strongly with one hand and the vine in the other.\n\"Ready?\", Cherie says.\n\"I guess...\", he says, still wondering what the hell the monkey is planning.\nThe monkey jumps onto his back and drifts the dead rabbit into the water as far as she can. It plops into the water about 20 feet from shore.\n\"What the hell was the point of all that if you're just going t...\", was all he managed to get out before the vine went taut. They were pulled at break-neck speeds as a penquin-beast dragged them around the lake trying to free its treat from the vine, and $ourHero finally clued in to the plan.\n\"HOLY JESUS GOAT F***ING CHRIST!\" screamed $ourHero.\n\"WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!\" shouted Cherie gleefully.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Let go of the vine.",
+                    "nextstep": 409
+                },
+                {
+                    "response": "Keep holding on.",
+                    "nextstep": 308
+                }
+            ]
+        },
+        {
+            "id":  308,
+            "message": "Just as $ourHero was about to lose his grip on the vine, the penquin beast whipped violently to the right just before the opposite shore, sending both of them flying. The monkey landed safely in a pile of leaves. $ourHero nailed a tree before landing upside-down in a rose bush.\n\"YOU STUPID GODDAMN CRAZY MONKEY!!!\" he shouted as he picked himself up, pulling thorns out of his skin. \"You could have gotten us KILLED!\"\n\"But I didn't. And we made it to the other side. So what are you complaining about?\" she said with a why-are-you-so-ungrateful look on her face.\n\"Next time WARN ME if you're going to do something as stupid as that!\" he said.\n\"Well if I did that, then you wouldn't have gone along with it.\" she rebutted.\n\"I DON'T CARE! Just warn me!\" he restated.\n\"Alright, if that's what you want...\" she said.\nThey climbed the mountain for the rest of the day, avoiding the occasional boulder making its way to the bottom. The boulders were very polite about it, exchanging pleasantries as they passed.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Keep climbing.",
+                    "nextstep": 914
+                },
+                {
+                    "response": "Camp for the night.",
+                    "nextstep": 309
+                }
+            ]
+        },
+        {
+            "id":  309,
+            "message": "They reached a small plateau and setup camp for the night.\nHe was awoken in the middle of the night by an eerie laugh.\n\"EEEEH HEH HEH HEH HEH HEH HEH! Come to me, my precious...\" was all he heard before seeing stars, followed by blackness.\nThe blackness wasn't because it was night, it was because he was bashed in the head with a mallet. I thought this was an important thing to point out, since the night doesn't hurt like hell.\nHe awoke to a splitting headache and the sight of a very ugly woman. Fortunately after years of training in night clubs, he was accustomed to both.\nHe looked around and saw that he was in a small hut decorated with deer antlers, buck skin paintings, and the souls of the brave and foolhearty, plus a few Northern Army regiment badges.\nHe couldn't see much else because it was dimly lit with 3 small candles. And he was tied spread-eagle to the bed, so that limited his view a little.\n\"Aaah, my precious is awake\" she said with a slight cackle.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Why Am I here?",
+                    "nextstep": 310
+                },
+                {
+                    "response": "\"You want some of this?\"",
+                    "nextstep": 915
+                }
+            ]
+        },
+        {
+            "id":  310,
+            "message": "\"Why have you brought me here, you vile creature? What are you going to do to me?\" he said in a voice braver then he felt.\n\"So many questions from one in a position to ask very little. You should be more patient, my precious.\" She went back to mixing ingredients into a bowl muttering what sounded like gibberish.\n\"Flügel des Hiebes und Auge von newt. Beruhigen das gas und stoppen das toot!\" she said as a puff of smoke rose from the bowl. She continue stirring.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "NOW try \"You want some of this?\"",
+                    "nextstep": 915
+                },
+                {
+                    "response": "Accept your fate.",
+                    "nextstep": 311
+                }
+            ]
+        },
+        {
+            "id":  311,
+            "message": "\"pssst...\", $ourHero heard from behind the bed. He turned to look.\n\"CHERIE!\" he whispered excitedly. \"Am I glad to see you for a change.\"\nShe moved quickly to untie $ourHero, making sure she wasn't spotted by the witch.\n\"Stay here and pretend you're still tied up. Oh, and consider yourself warned\" she whispered.\n\"Why?? What are you going to do?\" he snapped.\n\"Hey, you said warn, not explain...\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Trust the monkey.",
+                    "nextstep": 312
+                },
+                {
+                    "response": "You got this. It'll be fine.",
+                    "nextstep": 916
+                }
+            ]
+        },
+        {
+            "id":  312,
+            "message": "Before he knew it, Cherie was behind the witch holding a mallet above her head. Just as she was about to bring the mallet down, the witch spun around and pulled out...a silver button.\n\"OOOO, shiny!\" Cherie said with joy as she dropped the mallet and grabbed the button.\n\"Stupid monkey\" $ourHero said. While the witch was distracted, he jumped up and drew his daggar. Unfortunately, drawing the little daggar as he would draw his sword, and he flung the daggar into the ceiling.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Forget the daggar, grab the orchid.",
+                    "nextstep": 917
+                },
+                {
+                    "response": "I should probably grab my daggar.",
+                    "nextstep": 313
+                }
+            ]
+        },
+        {
+            "id":  313,
+            "message": "\"Why have you come all this way just to do an old woman harm?\" the witch asked as he jumped uselessly trying to grab his daggar.\n\"I have not come to do you harm. I come for the Orchid Of Enduring Beauty,\" he said.\n\"You mean this?\" she said as she dusted off a glass box with a wooden base. \"Why would you want my old Orchid Of Enduring Beauty? They sell them down at Krappytype you know.\"\n\"I am on a quest to in order to prove my love for a princess,\" he stated proudly.\n\"I once knew love,\" she said sadly. \"Then one day I go to visit my sister, leaving a nice plump pig on the bed for my husband so that he wouldn't starve while I was away. By the time I got back, the dumbass had fallen off a cliff. I always knew he'd get himself killed if I wasn't around to keep him in line.\"\nShe looked at $ourHero with a coy smile. \"Tell you what...I will give you the Orchid Of Enduring Beauty. But first you must give me a kiss. You must kiss me as passionately as you would your princess, so that I may touch love once more.\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "I REALLY MUST RETRIEVE MY DAGGAR!",
+                    "nextstep": 314
+                },
+                {
+                    "response": "Throw the potion on the witch.",
+                    "nextstep": 918
+                }
+            ]
+        },
+        {
+            "id":  314,
+            "message": "$ourHero stuggled to jump higher trying to reach the daggar. He soon realised it was pointless, and that he'd have to kiss the witch. \"Alright, I will kiss you, but you must close your eyes first.\"\n\"Oh good!\" she said, primping herself and puckering up.\n\"Oh god...\" $ourHero said as he shuddered in fear.\n\"Shiny pretty\" Cherie said, gently stroking the button.\nThe witch slowly approached $ourHero, eyes close, lips puckered, head tilted up and to the right. Her oily forehead glissened in the candle light. He could see directly up her nostrals. It was like looking into a hairy forest of despair.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Kiss the witch.",
+                    "nextstep": 919
+                },
+                {
+                    "response": "Use the monkey.",
+                    "nextstep": 215
+                }
+            ]
+        },             
+        {
+            "id":  408,
+            "message": "Suddenly, just before the shore, $ourHero lets go of the vine hoping that he's on the other side already. The log glides onto the beach easily, deposting them neatly on shore....which they quickly realized was the same one they just left.\n\"S***.\", he said. He looked around the beach trying to figure out another way across, not noticing that the monkey had already left. \"So how do we get across now?\" he said to no one in particular.\nAs he stood scratching himself and thinking, he noticed a dead rabbit flying over his head. \"That's odd.\" he thought, as the monkey jumps on his back and hands him a vine.\n\"Now don't let go this time, dumbass. The penguin knows where to drop us.\" she says as the vine goes taut.\nThe penguin beast violently whips them around the lake again, faster now that it's had a taste of rabbit.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Let go of the vine.",
+                    "nextstep": 913
+                },
+                {
+                    "response": "Keep holding on.",
+                    "nextstep": 208
+                }
+            ]
+        },
+        {
+            "id":  409,
+            "message": "Suddenly, just before the shore, $ourHero lets go of the vine hoping that he's on the other side already. The log glides onto the beach easily, deposting them neatly on shore....which they quickly realized was the same one they just left.\n\"S***.\", he said. He looked around the beach trying to figure out another way across, not noticing that the monkey had already left. \"So how do we get across now?\" he said to no one in particular.\nAs he stood scratching himself and thinking, he noticed a dead rabbit flying over his head. \"That's odd.\" he thought, as the monkey jumps on his back and hands him a vine.\n\"Now don't let go this time, dumbass. The penguin knows where to drop us.\" she says as the vine goes taut.\nThe penguin beast violently whips them around the lake again, faster now that it's had a taste of rabbit.",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Let go of the vine.",
+                    "nextstep": 913
+                },
+                {
+                    "response": "Keep holding on.",
+                    "nextstep": 308
+                }
+            ]
+        },
+        {
+            "id":  800,
+            "message": "\"Are you sure that your name is $ourHero?\"",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "Yes, that's definitely my name",
+                    "nextstep": 101
+                },
+                {
+                    "response": "No, sorry, I mis-spoke.",
+                    "nextstep": 100
+                }
+            ]
+        },        
+        {
+            "id": 900,
+            "message": "\"I'm here to kill everyone!\" $ourHero gushes gleefully.\n\"Well, that's an unusual goal for someone that brought roses and jewelry, but if you insist...ARCHERS, DRAW!\"\nSuddenly three dozen highly skilled archers stand up from behind the town wall pathway and fill him and his party full of arrows.\nYou, your guards, and your stable boy are now dead.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+
+        {
+            "id":  901,
+            "message": "He decides that he is in desperate need of some liquid courage and insist his guards join him. They hit the Moose And Rabbit Tavern and he orders a round for everyone.\nThe barmaid tells of their special drink made on the island to the east called Screech, and he decides that he must try it.\nAfter 4 shots of this, things become...blurry. The rest of night is filled with laughter and drinks, and he forgets all about Princess Lisa after meeting this absolutely hot albeit chunky woman at the bar.\nShe insists the he have another shot with her before heading back to her place, and he realizes that last drink kinda tasted gritty before completely blacking out for the rest of the night.\nThe next morning, he awoke to a splitting headache and the sight of a very ugly woman. Fortunately after years of training in night clubs, he was accustomed to both.\nHe looks around to find that he is in a small hut decorated with deer skin paintings and the souls of the brave and foolhearty, plus a few Northern Army regiment badges. He couldn't see much else because it was dimly lit with 3 small candles. And he was tied spread eagle to the bed, so that limited his view a little.\n\"Aaah, my precious is awake\" she said with a slight cackle. \"But I'm not ready yet, so back out you go.\" as she cracks him over the head with a mallet. With him knocked out, she turned back to her potion.\n\"Flügel des Hiebes und Auge von newt. Beruhigen das gas und stoppen das toot!\" she said as a puff of smoke rose from the bowl. She continue stirring.\n\"This oughta pay back the little bastard for trying to marry my sister.\" She spits into the potion to give it one last kick, then splashes it onto $ourHero's face.\nInstantly he wakes up screaming, as the potion takes effect. He writhes around as he is transformed into a frog. He looks around as he realizes what he's become. \"S***...\", he mutters softly.\nYou are now a frog. And a rather ugly one at that.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  902,
+            "message": "\"Uh, you know what? Never mind...you seem bitchy...erImean busy.\" He quickly turns around as it fully hits Princess Lisa that he just called her bitchy, but it was too late to say anything as he was now out of earshot.\n\"F*** YOU YOU F***ING T***!\" she screams to no one in particular.\nThey hit the Moose And Rabbit Tavern and he orders a round for everyone. The barmaid tells of their special drink made on the island to the east called Screech, and he decides that he must try it. After 4 shots of this, things become...blurry.\nThe rest of night is filled with laughter and drinks, and he forgets all about Princess Lisa after meeting this absolutely hot albeit chunky woman at the bar.\nShe insists the he have another shot with her before heading back to her place, and he realizes that last drink kinda tasted gritty before completely blacking out for the rest of the night.\nThe next morning, he awoke to a splitting headache and the sight of a very ugly woman. Fortunately after years of training in night clubs, he was accustomed to both.\nHe looks around to find that he is in a small hut decorated with deer skin paintings and the souls of the brave and foolhearty, plus a few Northern Army regiment badges. He couldn't see much else because it was dimly lit with 3 small candles. And he was tied spread eagle to the bed, so that limited his view a little.\n\"Aaah, my precious is awake\" she said with a slight cackle. \"But I'm not ready yet, so back out you go.\" as she cracks him over the head with a mallet. With him knocked out, she turned back to her potion.\n\"Flügel des Hiebes und Auge von newt. Beruhigen das gas und stoppen das toot!\" she said as a puff of smoke rose from the bowl. She continue stirring.\n\"This oughta pay back the little bastard for calling my sister bitchy.\" She spits into the potion to give it one last kick, then splashes it onto $ourHero's face.\nInstantly he wakes up screaming, as the potion takes effect. He writhes around as he is transformed into a frog. He looks around as he realizes what he's become. \"S***...\", he mutters softly.\nYou are now a frog. And a rather ugly one at that.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  903,
+            "message": "\"So you want to see what I bring to the party?!\" he squeals delightedly. He jumps up and lands legs spread and holding himself like Michael Jackson, gives a little pump before spinning and performing a rather bad Moonwalk, then begins dancing like he's had one too many drinks as that's really the only other time he dances.\n\"Uh...yeeeeeeeah, no...ARCHERS!\", Princess Lisa commands. Suddenly three dozen highly skilled archers stand up from behind the town wall pathway and fill him and his party full of arrows.\nYou, your guards, and your stable boy are now dead.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  904,
+            "message": "\"I also brought this!\" as he proudly presents a strapping young man. \"My stable boy is especially good with handling unruly animals, and keenly disciplines them with a riding crop.\"\n\"Uh, yeah, as if that's not weird or anything. Why don't you and your 'stable boy' go back to the barn. I got better things to do.\"\nDejected, you return to the Kingdom of Nor'Shor and comfort yourself by acting like an unruly animal. While you're not dead, you are now destined to live alone for the rest of your life, with the exception of the occasional fishing trip in the mountains with the stable boy.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  905,
+            "message": "\"Uh....yeah, no. Your juice ain't worth THAT kinda squeeze.\" he proclaims.\n\"You couldn't even handle my juice if you tried, pony boy.\" she rebutted. Dejected and slightly redfaced over being called \"pony boy\", because seriously...how the hell did THAT rumour gets around up here, he hits the Moose And Rabbit Tavern to regain his composure.\nWhile there, the barmaid tells of their special drink made on the island to the east called Screech, and he decides that he must try it in order to kill any memories of the day. After 6 shots of this, things become...blurry.\nThe rest of night is filled with drinks and the occasional bout of crying. But then he forgets all about Princess Lisa after meeting this absolutely hot albeit chunky woman at the bar.\nRealizing he's already 3 sheets to the wind, she saves the roofie for another time, and just convinces him to have another shot with her before heading back to her place. He passes out solid during the ride, and she smiled as her plan began to take shape.\nThe next morning, he awoke to a splitting headache and the sight of a very ugly woman. Fortunately after years of training in night clubs, he was accustomed to both.\nHe looks around to find that he is in a small hut decorated with deer skin paintings and the souls of the brave and foolhearty, plus a few Northern Army regiment badges. He couldn't see much else because it was dimly lit with 3 small candles. And he was tied spread eagle to the bed, so that limited his view a little.\n\"Aaah, my precious is awake\" she said with a slight cackle. \"But I'm not ready yet, so back out you go.\" as she cracks him over the head with a mallet. With him knocked out, she turned back to her potion.\n\"Flügel des Hiebes und Auge von newt. Beruhigen das gas und stoppen das toot!\" she said as a puff of smoke rose from the bowl. She continue stirring.\n\"This oughta pay back the little bastard for ditching my sister.\" She spits into the potion to give it one last kick, then splashes it onto $ourHero's face.\nInstantly he wakes up screaming, as the potion takes effect. He writhes around as he is transformed into a frog. He looks around as he realizes what he's become. \"S***...\", he mutters softly.\nYou are now a frog. And a rather ugly one at that.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  906,
+            "message": "Deciding that he doesn't have time for some stupid monkey, he confidently strides on into the Forest Of Suffering alone. Quickly his confidence subsides, as he realizes he's now deep in the Forest Of Suffering, alone. Coyotes yip in the distance.\nAfter walking for what seemed like hours when it was really only like 45 minutes, he turns around to realize...did he really just walk in a circle for the last hour. That rocks looks awfully familiar. Yup...it was the one he used as a latrine.\n\"S***.\" he exclaimed, both over the situation and stating what he left behind that rock. \"OK, screw this, I'm going to Krappytyre.\"\nHe marched out of the forest, waltzed into the Krappytyre market place and bought an Orchid Of Enduring Beauty, encased in a nice glass box with a wooden base. Excitedly, he returns to he Kingdom Of Goosbey to proudly display his prize.\n\"LISA! LISA MY SWEET! I'VE GOT IT! I'VE GOT THE ORCHID OF ENDURING BEAUTY FOR YOU!!!\" he proclaimed as he ran up the courtyard path.\n\"Oh really...let me see it.\" she sneered as she snatched the orchid out of his hands. Completely ignoring the orchid itself, she flips the case over to find written on the bottom...absolutely nothing, since it was brand new.\n\"I told you to I'd know if you bought it, dumbass. The one I wanted has 'Property of Lisa' written on the bottom in fancy glitter handwriting. Now take your guards and your 'stable boy' and get lost.\"\nDejected, you return to the Kingdom of Nor'Shor and comfort yourself by acting like an unruly animal.\nWhile you're not dead, you are now destined to live alone for the rest of your life, with the exception of the occasional fishing trip in the mountains with the stable boy.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  907,
+            "message": "With a single swipe of his blade, he quickly dispatched the talking monkey before it could say anything else. Boosted by the slaughter of a defenseless animal, he confidently strides on into the Forest Of Suffering alone. Quickly his confidence subsides, as he realizes he's now deep in the Forest Of Suffering, alone. Coyotes yip in the distance.\nAfter walking for what seemed like hours when it was really only like 45 minutes, he turns around to realize...did he really just walk in a circle for the last hour.\nThat rocks looks awfully familiar. Yup...it was the one he used as a latrine.\n\"S***.\" he exclaimed, both over the situation and stating what he left behind that rock. \"OK, screw this, I'm going to Krappytyre.\"\nHe marched out of the forest, waltzed into the Krappytyre market place and bought an Orchid Of Enduring Beauty, encased in a nice glass box with a wooden base. Excitedly, he returns to he Kingdom Of Goosbey to proudly display his prize.\n\"LISA! LISA MY SWEET! I'VE GOT IT! I'VE GOT THE ORCHID OF ENDURING BEAUTY FOR YOU!!!\" he proclaimed as he ran up the courtyard path.\n\"Oh really...let me see it.\" she sneered as she snatched the orchid out of his hands. Completely ignoring the orchid itself, she flips the case over to find written on the bottom...absolutely nothing, since it was brand new.\n\"I told you to I'd know if you bought it, dumbass. The one I wanted has 'Property of Lisa' written on the bottom in fancy glitter handwriting. Now take your guards and your 'stable boy' and get lost.\"\nDejected, you return to the Kingdom of Nor'Shor and comfort yourself by acting like an unruly animal.\nWhile you're not dead, you are now destined to live alone for the rest of your life, with the exception of the occasional fishing trip in the mountains with the stable boy.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  908,
+            "message": "\"Yeah, as if I'm going to trust a stupid monkey.\" he sneered as he kicked the monkey off the road. Boosted by kicking a defenseless animal, he confidently strides on into the Forest Of Suffering alone. Quickly his confidence subsides, as he realizes he's now deep in the Forest Of Suffering, alone. Coyotes yip in the distance.\nAfter walking for what seemed like hours when it was really only like 45 minutes, he turns around to realize...did he really just walk in a circle for the last hour.\nThat rocks looks awfully familiar. Yup...it was the one he used as a latrine. \"S***.\" he exclaimed, both over the situation and stating what he left behind that rock. \"OK, screw this, I'm going to Krappytyre.\"\nHe marched out of the forest, waltzed into the Krappytyre market place and bought an Orchid Of Enduring Beauty, encased in a nice glass box with a wooden base. Excitedly, he returns to he Kingdom Of Goosbey to proudly display his prize.\n\"LISA! LISA MY SWEET! I'VE GOT IT! I'VE GOT THE ORCHID OF ENDURING BEAUTY FOR YOU!!!\" he proclaimed as he ran up the courtyard path.\n\"Oh really...let me see it.\" she sneered as she snatched the orchid out of his hands. Completely ignoring the orchid itself, she flips the case over to find written on the bottom...absolutely nothing, since it was brand new.\n\"I told you to I'd know if you bought it, dumbass. The one I wanted has 'Property of Lisa' written on the bottom in fancy glitter handwriting. Now take your guards and your 'stable boy' and get lost.\"\nDejected, you return to the Kingdom of Nor'Shor and comfort yourself by acting like an unruly animal.\nWhile you're not dead, you are now destined to live alone for the rest of your life, with the exception of the occasional fishing trip in the mountains with the stable boy.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  909,
+            "message": "\"OK, screw this, I ain't dealing with ghosts. I'm going to Krappytyre.\" He marched out of the forest, waltzed into the Krappytyre market place and bought an Orchid Of Enduring Beauty, encased in a nice glass box with a wooden base. Excitedly, he returns to he Kingdom Of Goosbey to proudly display his prize.\n\"LISA! LISA MY SWEET! I'VE GOT IT! I'VE GOT THE ORCHID OF ENDURING BEAUTY FOR YOU!!!\" he proclaimed as he ran up the courtyard path.\n\"Oh really...let me see it.\" she sneered as she snatched the orchid out of his hands. Completely ignoring the orchid itself, she flips the case over to find written on the bottom...absolutely nothing, since it was brand new.\n\"I told you to I'd know if you bought it, dumbass. The one I wanted has 'Property of Lisa' written on the bottom in fancy glitter handwriting. Now take your guards and your 'stable boy' and get lost.\"\nDejected, you return to the Kingdom of Nor'Shor and comfort yourself by acting like an unruly animal.\nWhile you're not dead, you are now destined to live alone for the rest of your life, with the exception of the occasional fishing trip in the mountains with the stable boy.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  910,
+            "message": "\"Well I ain't going to let a little lake get in my way.\" he said confidently. \"I'm gonna swim it.\"\n\"You're going to try swimming across this lake, in full gear?\" Cherie said incredulously.\n\"Yeah, it'll be fine. Don't worry about it.\" $ourHero waded into the lake and began dog paddling across it. He felt something brush against his leg. Then something big nibbled on him. \"OOOOOWW!!!\" he screamed in pain.\nSuddenly a nasty creature that looked like a massive penquin with razor sharp teeth sprang out of the water and gobbled up the idiot whole. It came crashing back into the water sending waves every which way.\n\"And that's why you don't swim across the Lake Of Unending Pain.\" Cherie said to the rabbit in the meadow. \"Idiot. You'd think 'Lake Of Unending Pain...must have gotten that name *somehow*'  But no...not this moron. 'I'm going to swim across it! It'll be fine...' he says.\"\nYou are now on your next quest, reaching the penguin's stomach. There you are greeted by a ghostly creature. \"I am the Cattata Fish. And you have come in through the wrong way, so you're pretty much SOL now, dumbass.\"",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  911,
+            "message": "Uh uh...no way. I ain't trusting my life to some monkey when THAT thing is in the lake.\" he said with a shiver in his voice. \"I'm going to Krappytyre.\" He turned towards the woods, but suddenly a rabbit jumped out of the grass and startled him.\nHe stumbled backwards into the lake, making a great splash on the way. As he was trying to regain his footing, the massive penguin beast swam up and swollowed him whole. Cherie simply muttered \"Dumbass\" as she walked back into the forest.\nYou are now on your next quest, reaching the penguin's stomach. There you are greeted by a ghostly creature. \"I am the Cattata Fish. And you have come in through the wrong way, so you're pretty much SOL now, dumbass.\"",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  912,
+            "message": "\"Uh, yeah, no...I don't know what you have planned, but you're on your own.\"\n\"Well screw you too, then...\" Cherie said as she drifted the dead rabbit into the lake. He realized he was still holding the other end of the vine when the penguin beast grabbed it's treat and sped off with it, yanking him off the beach and into the lake.\n\"HOLY JESUS GOAT F***ING CHRIST!\" screamed $ourHero. He was pulled at break neck speeds as a penquin beast dragged him around the lake trying to free it's treat from the vine, and $ourHero finally clued in to the plan.\nSuddenly, the penguin beast whipped violently to the left just before the shore, sending him flying into the meadow about 5 feet from where he started.\nSoaking wet and choking slightly, he sputters \"OK, screw this, I'm going home.\"\nYou return to the Kingdom of Nor'Shor, where you gladly live alone for the rest of your life, with the exception of the occasional fishing trip in the mountains with the stable boy.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  913,
+            "message": "Suddenly, $ourHero left go just as the penguin beast swung by the shore, sending him flying into the meadow about 5 feet from where he started.\nSoaking wet and choking slightly, he sputters \"OK, screw this, I'm going home.\"\nYou return to the Kingdom of Nor'Shor, where you gladly live alone for the rest of your life, with the exception of the occasional fishing trip in the mountains with the stable boy.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  914,
+            "message": "$ourHero decides to keep climbing, despite the monkey's complaining and even though it was getting dark. This was not a smart idea, as it was getting difficult to see where it was safe to walk.\nWhat he thought was a rock turned out to be bear s***, which he slipped in and fell down the mountain. Cherie just muttered \"Dumbass\" under her breath as she climbed a tree to sleep in for the night.\nYou died. Though not right away. You kinda twitched in pain at the edge of a ravine for a few hours. Then the coyotes came. It was not pretty.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  915,
+            "message": "Reverting to an almost automated response, he girates his hips and asks \"You want some of this?\" in the hopes that she might let him go afterwards. \"It's not time for that now, dumbass.\" she responds as she cracks him over the head with a mallet.\nWith him knocked out, she turned back to her potion. \"This oughta pay back the little bastard for hitting on my sister.\" She spits into the potion to give it one last kick, then splashes it onto $ourHero's face.\nInstantly he wakes up screaming, as the potion takes effect. He writhes around as he is transformed into a frog. He looks around as he realizes what he's become. \"S***...\", he mutters softly.\nYou are now a frog. And a rather ugly one at that.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  916,
+            "message": "Jumping up before the monkey could get ready, he screamed his loudest warcry he could muster as he attempted to draw his weapon. This startled Cherie, who threw the mallet which hit the deer antlers that fell on the spoon that launched the bowl of potion square in his face.\nHe writhes around as the potion takes effect and he is transformed into a frog. He looks around as he realizes what he's become. \"S***...\", he mutters softly.\nYou are now a frog. And a rather ugly one at that.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  917,
+            "message": "Ditching his weapon, $ourHero \"THE ORCHID IS MINE!\" as he dove for the orchid.\n\"Oh no you don't!\" the witch said as she cracks him over the head with the mallet.\n\"Shiny pretty\", Cherie said as she stroked the botton gently. With him knocked out, the witch turned back to her potion.\n\"This oughta teach the little bastard for trying to steal MY orchid.\" She spits into the potion to give it one last kick, then splashes it onto $ourHero's face.\nInstantly he wakes up screaming, as the potion takes effect. He writhes around as he is transformed into a frog. He looks around as he realizes what he's become. \"S***...\", he mutters softly.\nYou are now a frog. And a rather ugly one at that.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  918,
+            "message": "$ourHero shuddered at the thought of kissing the old witch, and couldn't free his weapon from the ceiling. Thinking fast, he grabbed the bowl of potion and threw it at the witch.\n\"Ohhhh...the burning...\"the witch said in a half-hearted voice as she rolled her eyes. \"The potions don't work on the one that created it, dumbass.\" She grabbed the mallet and cracks him over the head with it.\n\"This oughta teach the little bastard for not wanting to kiss ME.\", she said as she wringed out her shirt directly onto $ourHero's face. Instantly he wakes up screaming as the potion takes effect. He writhes around as he is transformed into a frog. He looks around as he realizes what he's become. \"S***...\", he mutters softly.\nYou are now a frog. And a rather ugly one at that.",
+            "responsetype":  4,
+            "nextstep": 999
+        },
+        {
+            "id":  919,
+            "message": "$ourHero drew near to the witch, slowly embracing her lips, then immediately dry heaved over the taste of stale cigarettes.\n\"Oh, so I'm so digusting that you can even give me one little kiss without wanting to vomit???\" she asked with a slight sob.\n\"Uh, yeah...pretty much\" he responded sarcastically, forgetting where he was.\nThe witch's eyes welled up with tears as she grabbed the mallet and cracks him over the head with it. \"This oughta teach the little bastard for making me cry.\" she sobbed as she threw the potion on him.\nInstantly he wakes up screaming as the potion takes effect. He writhes around as he is transformed into a frog. He looks around as he realizes what he's become. \"S***...\", he mutters softly.\nYou are now a frog. And a rather ugly one at that.",
+            "responsetype":  4,
+            "nextstep": 999
+        },                
+        {
+            "id":  600,
+            "message": "After a leisurely walk through the Forest Of Suffering, he returns to the Kingdom Of Goosbey to proudly display his prize.\n\"LISA! LISA MY SWEET! I'VE GOT IT! I'VE GOT THE ORCHID OF ENDURING BEAUTY FOR YOU!!!\" he proclaimed as he ran up the courtyard path.\n\"Oh really...let me see it.\" she sneered as she snatched the orchid out of his hands. Completely ignoring the orchid itself, she flips the case over to find on the bottom: 'Property of Lisa', written in fancy glitter handwriting. \"Wow, you really DID steal back my orchid from my sister! Thanks!\"\n\"That was your sister???\" $ourHero said.\n\"Yeah. We've been fighting over this orchid since we were kids. Bitch stole it during her last visit. I would have tried to get it back sooner, but then her husband died and it was just a whole big dramafest so I let it slide for a while.\"\n\"So, Lisa, darling. About our agreement.\" $ourHero said with a smile.\n\"What's that?\" Lisa said feigning confusion. \"Oh, right right right, the marriage thing. Yeah, that's not going to happen.\"\n\"What!? Why not?\" he said with almost a sob.\n\"Well you see, while you were away, me and Roy kinda hooked up.\"\n\"ROY?! But...the goats...\" $ourHero stammered.\n\"You shouldn't believe everything you hear.\" Lisa said. \"Besides, he's shown me what it's like to be with a real man, though he does act like an unruly animal at times.\"\nLisa and Roy spent the rest of their lives together deeply and passionately in love.\nCherie went back to the Forest Of Suffering and had 20 kids with the chimp up the road.\n$ourHero decided to retry his luck with the witch, but she had already found a frog and turned him into a Chippendale dancer so she wasn't interested.\nThe stable boy got together with the baker's son, and they lived happily ever after with their adopted Chinese baby girl.\nAnd $ourHero spent the rest of his life alone, occasionlly going on fishing trips to the mountians that were really just a cover for him drinking heavily while crying himself to sleep.",
+            "responsetype":  4,
+            "nextstep": 999
+        }, 
+        {
+            "id":  999,
+            "message": "Well that didn't go so well. Want to try again?",
+            "responsetype":  2,
+            "responses": [
+                {
+                    "response": "I want to restart.",
+                    "nextstep": 3
+                },
+                {
+                    "response": "I want to go back to my last save point.",
+                    "nextstep": 2
+                },                
+                {
+                    "response": "I want a new story.",
+                    "nextstep": 1
+                },                 
+                {
+                    "response": "I've had enough for now.",
+                    "nextstep": 0
+                }
+            ]
+        }               
+    ]
+}

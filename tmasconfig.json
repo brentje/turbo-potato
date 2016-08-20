@@ -1,0 +1,93 @@
+{
+
+	"menugreeting": "Hi.  Welcome to\nTell Me A Story\n",
+	"menumessage": 
+	{
+		"message": "Which story would you like to play?",
+		"responses":[
+		    {
+				"response": "The Orchid Of Enduring Beauty",
+				"filename": "OrchidOfEnduringBeauty.json"
+			},
+	        {
+				"response": "Becareful What You Wish For",
+				"filename": "BecarefulWhatYouWishFor.json"
+			}
+		]
+	},
+	"firststep": 100,
+	"notloadedmessage": "Sorry, that story is not quite ready yet.  Try again later.\n",
+	"loadedmessage": "OK!  Let's go on an adventure!\nAnd remember, you can restart at any time by saying \"#Restart\".  To quit, just say \"#Quit\".\nTo save your progress, just say \"#Save\".\nTo set the reading speed, say \"#ReadSpeed [number]\". Example: \"#ReadSpeed 5\" will allow 5 seconds to read each message before the next one is sent.\nNow lets go!\n",
+	"cancelmessage": "Returning you to your story.\n",
+	"errormessage": "I'm sorry, I encountered an error.\n",
+	"endstoryerrormessage": "I'm sorry, I encountered a serious error.  Ending Story.\n",
+	"unknownresponse": "Unknown response.  Maybe try clicking a button instead?\n",	
+	"readspeedcode": "#ReadSpeed",
+	"readspeed": 4,	
+	"readspeedupdatemessage" : "Updating reading speed.",
+	"readspeederrormessage": "Sorry, but the reading speed must be a number between 1 and 30",
+	"savecode": "#Save",
+	"savemessage": "Progress saved!  To return to this point, just say \"#GoBack\".\n",
+	"gotocode": "#GoBack",
+	"gotomessage": 
+	{
+		"message": "Are you sure you want to return to the last save point?",
+		"responses":[
+		    {
+				"response": "Keep going.",
+				"answer": 0
+			},		
+	        {
+				"response": "I want to go back.",
+				"answer": 1,
+				"extramessage": "Got it.\n"
+			}
+		]
+	},
+	"restartcode": "#Restart",
+	"restartmessage": 
+	{
+	 	"message": "Are you sure you want to restart? Your progress will be lost.",
+	 	"responses" :[
+		    {
+				"response": "Keep going.",
+				"answer": 0
+			},
+		    {
+				"response": "Take me back to the start.",
+				"answer": 1,
+				"nextstep": 3,
+				"extramessage": "Got it.\n"
+			},			
+	        {
+				"response": "I want a new story.",
+				"answer": 1,
+				"nextstep": 1,	
+				"extramessage": "Got it.\n"
+			}
+		]
+	},
+	"quitcode": "#Quit",
+	"quitmessage": 
+	{
+    	"message": "Are you sure you want to quit? Your progress will be lost.",
+    	"responses": [
+		    {
+				"response": "Keep going.",
+				"answer": 0
+			},		
+	        {
+				"response": "I want to quit.",
+				"answer": 1,
+				"nextstep": 0,
+				"extramessage": "Got it.\n"
+			}
+		]
+	},
+	"devgotocode": "#DevGoto",
+	"devgotopasscode": "beefy",	
+	"devgotomessage" : "Setting next step.\n",
+	"storiesdir": "stories",
+	"logfile": "StoryPlayer.log",
+	"loglevel": "INFO"
+}
