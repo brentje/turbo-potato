@@ -45,7 +45,7 @@ def incoming():
 
 if __name__ == '__main__':
 	if os.environ.get('PORT') :
-		app.run(port=os.environ['PORT'], debug=False)
+		app.run(host='0.0.0.0' ,port=environ.get("PORT", 5000), debug=False)
 	else :
 		app.run(port=8080, debug=False)
     #app.run(port=8080, debug=False)
