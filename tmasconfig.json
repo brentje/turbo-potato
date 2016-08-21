@@ -22,6 +22,8 @@
 	"errormessage": "I'm sorry, I encountered an error.\n",
 	"endstoryerrormessage": "I'm sorry, I encountered a serious error.  Ending Story.\n",
 	"unknownresponse": "Unknown response.  Maybe try clicking a button instead?\n",	
+	"invalidresponse": "Invalid response.  You can only use letters and numbers for this response.\n",
+	"toolongresponse": "Response too long.  You can only use up to 30 characters for this response.\n",
 	"readspeedcode": "#ReadSpeed",
 	"readspeed": 4,	
 	"readspeedupdatemessage" : "Updating reading speed.",
@@ -89,5 +91,5 @@
 	"devgotomessage" : "Setting next step.\n",
 	"storiesdir": "stories",
 	"logfile": "StoryPlayer.log",
-	"loglevel": "INFO"
+	"loglevel": "DEBUG"
 }

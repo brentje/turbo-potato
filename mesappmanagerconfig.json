@@ -1,0 +1,10 @@
+{
+	"kikmessenger": 1,
+	"kikuser": "cheriebot",
+	"kikapikey": "23636aaf-53d5-410d-aa85-bf484d356dd9", 
+	"webhook": "https://082fd13e.ngrok.io/incoming",
+	"unknownresponsemessage": "Sorry, but I really don't know what to do with this response.",
+	"gamename": "Adventure Fantasy Quest Time",
+	"logfile": "mesappmanager.log",
+	"loglevel": "DEBUG"
+}

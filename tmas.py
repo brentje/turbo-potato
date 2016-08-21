@@ -23,7 +23,6 @@
 import json
 import sys
 import logging
-import logging.handlers
 import os
 import copy
 
@@ -77,6 +76,9 @@ class StoryController(object) :
 
         #currently running stories
         self.userData = {}
+
+        #list of common responses to pass to the story player
+        self.configResponses = {}
         
         self.loadConfig()
 
@@ -122,6 +124,10 @@ class StoryController(object) :
             except:
                 print 'Unexpected error loading config: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1])        
 
+            self.configResponses['unknownresponse'] = self._config['unknownresponse']
+            self.configResponses['invalidresponse'] = self._config['invalidresponse']
+            self.configResponses['toolongresponse'] = self._config['toolongresponse']
+
 
     #Load the requested story for the user.
     def loadStory(self, storyFilename):
@@ -140,7 +146,7 @@ class StoryController(object) :
                     self.logger.warn('Unexpected error loading story: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1]))
                     return self._config['notloadedmessage']
         
-        self.logger.debug('loadStory loaded: {0}'.format(storyFilename))                  
+        self.logger.debug('StoryController loadStory loaded: {0}'.format(storyFilename))                  
 
 
     #Present the list of available stories from the config file.
@@ -169,6 +175,7 @@ class StoryController(object) :
         return ret
 
 
+    #Main function for the class.
     #Handles all incoming and outgoing messages from the system.
     #User flags and system commands are checked first before presenting stories or playing a story.
     def getStoryResponse(self, userID, userResponse = '') :
@@ -253,7 +260,7 @@ class StoryController(object) :
                     if not extraMessage :
                         #story has been loaded successfully.  Create user's story object
                         self.logger.debug('Does story exist: {0}'.format(self._stories.has_key(option['filename'])))
-                        self.userData[userID] = StoryPlayer(self.name, userID, self._stories[option['filename']], self._config['readspeed'], self._config['firststep'], self._config['unknownresponse'], self.logger)
+                        self.userData[userID] = StoryPlayer(self.name, userID, self._stories[option['filename']], self._config['readspeed'], self._config['firststep'], self.configResponses, self.logger)
                         extraMessage = self._config['loadedmessage']
                         userResponse = ''
 
@@ -385,10 +392,10 @@ class StoryController(object) :
 
 
 #StoryPlayer class - used to control story playback and message creation.
-# This class monitors plays through an individual story for a user.
+# This class plays through an individual story for a user.
 # Used by the StoryController class.  Not recommended to be instantiated alone.
 class StoryPlayer(object) :
-    def __init__(self, name, userid, currentStory, readSpeed, firstStep, unknownResponseMessage, logger):
+    def __init__(self, name, userid, currentStory, readSpeed, firstStep, configResponses, logger):
         self.name = name
         self.userid = userid
         self.readSpeed = readSpeed
@@ -396,12 +403,12 @@ class StoryPlayer(object) :
         self.logger = logger
 
         # used to store the story data
-        self._story = currentStory
+        self._story = copy.deepcopy(currentStory)
 
         self.logger.debug('Does story exist: {0}'.format(self._story.has_key('step')))
 
         # used to store 'unknown response' message
-        self.unknownResponseMessage = unknownResponseMessage
+        self.configResponses = copy.deepcopy(configResponses)
 
         # used to store the default current step.
         self.firstStep = firstStep
@@ -456,6 +463,7 @@ class StoryPlayer(object) :
             self.logger.error('Unexpected error: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1]))
 
 
+    #Main function for the class.
     #Process the user's story response, and provide the next step in the story back.
     def progressStory(self, userResponse = '', extraMessage = ''):
         self.logger.debug('StoryPlayer progressStory userResponse: {0}  | extraMessage: {1}'.format(userResponse, extraMessage))
@@ -481,8 +489,14 @@ class StoryPlayer(object) :
             elif self.lastStep['responsetype'] == TEXTRESPONSE :
                 self.logger.debug('StoryPlayer progressStory TEXTRESPONSE')
                 #The user was asked a freeform question. Story the information.
-                self.userFields[self.lastStep['responsefield']] = userResponse
-                self.currentStep = self.lastStep['nextstep']
+                if all(x.isalnum() or x.isspace() for x in userResponse):
+                    if len(userResponse) <= 30 :
+                        self.userFields[self.lastStep['responsefield']] = userResponse
+                        self.currentStep = self.lastStep['nextstep']
+                    else :
+                        extraMessage = self.configResponses['toolongresponse']
+                else :
+                    extraMessage = self.configResponses['invalidresponse']
 
             elif self.lastStep['responsetype'] == MULTIRESPONSE :
                 self.logger.debug('StoryPlayer progressStory MULTIRESPONSE')
@@ -495,7 +509,7 @@ class StoryPlayer(object) :
                     #user provided an unknown response.  Repeat current step.
                     self.logger.info('Unknown MULTIRESPONSE response: {0}'.format(userResponse))
                     response = {}
-                    response['message'] = self.unknownResponseMessage 
+                    response['message'] = self.configResponses['unknownresponse'] 
                     response['responses'] = self.lastStep['responses']
                     ret.append(response)
                     self.logger.info('Unknown MULTIRESPONSE response: {0}'.format(response))
@@ -509,8 +523,7 @@ class StoryPlayer(object) :
             else :
                 #user provided an unknown response.  Repeat current step.
                 self.logger.info('Unknown response: {0}'.format(userResponse))
-                extraMessage = self.unknownResponseMessage
-
+                extraMessage = self.configResponses['unknownresponse'] 
 
         ret.append(self.getCurrentStep(extraMessage))
 
