@@ -29,6 +29,10 @@ app = Flask(__name__)
 
 mesAppManager = MesAppManager('Messenger App')
 
+@app.route('/', methods=['GET'])
+def hello():
+	print 'StoryTellerBot - Visit me on Kik!'
+	
 @app.route('/incoming', methods=['POST'])
 def incoming():
 	print 'Got Here'
