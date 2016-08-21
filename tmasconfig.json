@@ -91,5 +91,5 @@
 	"devgotomessage" : "Setting next step.\n",
 	"storiesdir": "stories",
 	"logfile": "StoryPlayer.log",
-	"loglevel": "DEBUG"
+	"loglevel": "WARN"
 }
