@@ -1,9 +1,0 @@
-{
-	"kikuser": "",
-	"kikapikey": "", 
-	"webhook": "",
-	"unknownresponsemessage": "Sorry, but I really don't know what to do with this response.",
-	"gamename": "Adventure Fantasy Quest Time",
-	"logfile": "game.log",
-	"loglevel": "DEBUG"
-}
