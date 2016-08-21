@@ -18,7 +18,7 @@ File Descriptions:
 
 tmas.py - the main python file containing the story classes used for controlling playback and user interation.
 tmasconfig.json - the configuration file for tmas.py.  
-game.py - the application wrapper used to handling wen interactions through Flask.
+bot.py - the application wrapper used to handling web interactions through Flask.
 mesappmanager.py - the manager class that handles interactions with each messaging platform.
 mesappmanagerconfig.json - the configuration file for the messaging platform manager.
 kikmessenger.py - The Kik messaging platform class used for controlling interactions between the Kik APIs and the Story Telling Bot class
@@ -30,6 +30,19 @@ versions.txt - File listing different release versions and the changes in each.
 Directories:
 
 stories - contains the list of all the author created story JSON files for the application.
+
+
+To run this program, first enter data for the specific messaging platform you wish to support. 
+
+For Kik, update the mesappmanagerconfig.json to add the Kik user name and Kik API key.  Alternatively, you can also create environment variables KIK_USER and KIK_API_KEY with the appropriate values, which will override the config file values.
+
+After entering the messanging platform specific values, update the mesappmanagerconfig.json to add the the webhook URL.  Alternatively, you can also create the environment variable BOT_WEBHOOK with the appropriate values, which will override the config file value.
+
+Once the necessary information has been entered, simply run:
+
+	python bot.py
+
+
 
 
 Full description - tmasconfig.json 
