@@ -41,9 +41,12 @@ def incoming():
 		print 'Error: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1])
 		return Response(status=403)
 
-    
 
 if __name__ == '__main__':
-    app.run(port=8080, debug=False)
+	if os.environ.get('PORT') :
+		app.run(port=os.environ['PORT'], debug=False)
+	else :
+		app.run(port=8080, debug=False)
+    #app.run(port=8080, debug=False)
 
 
