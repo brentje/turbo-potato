@@ -23,25 +23,22 @@ import sys
 
 from flask import Flask, request, Response
 
-from messengerapp import MessengerApp
+from mesappmanager import MesAppManager
 
 app = Flask(__name__)
 
-messengerApp = MessengerApp('Messenger App')
-
-@app.route('/incoming', methods=['GET'])
-def verify():
-
-    return Response(response="Hello world", status=200)
+mesAppManager = MesAppManager('Messenger App')
 
 @app.route('/incoming', methods=['POST'])
 def incoming():
+	print 'Got Here'
 
-    try :
-        return Response(status=messengerApp.processRequest(request))
-    except:
-        print 'Error: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1])        
-        return Response(status=403)
+	try :
+		print 'Got Here 2'
+		return Response(status=mesAppManager.processRequest(request))
+	except:
+		print 'Error: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1])
+		return Response(status=403)
 
     
 

@@ -14,22 +14,18 @@ General Information:
 
 This application will process JSON files containing story elements, to be played back to end users.  General features of the system are that it will allow authors to define replacement fields that they can use within their story to name items or record other user input; allow authors to prompt end users with choices that will define where they go in the story; allow end users to save their progress before a choice is made; allow end users to control the reading speed for the story; and others that are detailed within this document.
 
-To run this application after filling out the necessary configuration files, simply run:
-
-python game.py
-
-
 File Descriptions:
 
 tmas.py - the main python file containing the story classes used for controlling playback and user interation.
 tmasconfig.json - the configuration file for tmas.py.  
 game.py - the application wrapper used to handling wen interactions through Flask.
-messengerapp.py - the messaging platform class used for controlling interactions between particular messenger app APIs and the Story Telling Bot class
-messengerappconfig.json - the configuration file for the application wrapper.
+mesappmanager.py - the manager class that handles interactions with each messaging platform.
+mesappmanagerconfig.json - the configuration file for the messaging platform manager.
+kikmessenger.py - The Kik messaging platform class used for controlling interactions between the Kik APIs and the Story Telling Bot class
 requirements.txt - python requirements file
 LICENSE - GNU General Public Licence V3 file
 Readme.txt - This file.
-
+versions.txt - File listing different release versions and the changes in each.
 
 Directories:
 
@@ -76,8 +72,17 @@ Field Descriptions:
 	"errormessage": "I'm sorry, I encountered an error.\n\r", 
 	--a general error message used throughout the system
 
-	"unknownresponse": "Unknown response.  Maybe try clicking a button instead?\n\r", 
+	"endstoryerrormessage": "I'm sorry, I encountered a serious error.  Ending Story.\n",
+	--the message sent to the user when the system encounters a major error.	
+
+	"unknownresponse": "Unknown response.  Maybe try clicking a button instead?\n",	
 	--the message sent to the user when they give a response that the system doesn't know how to handle.
+
+	"invalidresponse": "Invalid response.  You can only use letters and numbers for this response.\n",
+	--the message sent to the user when they provide an invalid TEXTRESPONSE
+
+	"toolongresponse": "Response too long.  You can only use up to 30 characters for this response.\n",
+	--the message sent to the user when they provide a TEXTRESPONSE that is too long.
 
 	"readspeedcode": "#ReadSpeed", 
 	--the system command that allows the user to select their reading speed.  Example usage:  #Readspeed 5
@@ -181,19 +186,23 @@ Field Descriptions:
 
 
 
-Full description - messengerappconfig.json 
+Full description - mesappmanagerconfig.json 
 
 This file is a standard JSON file containing the configuration fields required by the messenging platform application wrapper.  This is a mandatory file as the system will not function without it.  This program is currently a work in progress.
 
 Field Descriptions:
 
 {
-	"user": "myuser",
-	--user name of the messaging platform
+
+	"kikmessenger": 1,
+	--OPTIONAL.  Include if this app will respond to Kik messages.
 	
-	"apikey": "a123456-7890-1234-567890123456", 
-	--api key for the messaging platform
-	
+	"kikuser": "cheriebot",
+	--OPTIONAL - Kik bot user name Include if "kikmessenger" is enabled and environment variables aren't set.
+
+	"kikapikey": "23636aaf-53d5-410d-aa85-bf484d356dd9", 
+	--OPTIONAL - Kik not API Key.  Include if "kikmessenger" is enabled and environment variables aren't set.
+
 	"webhook": "https://webhookwebsite/incoming",
 	--webhook site hosting this application that the messaging platform will send responses to
 	
@@ -209,8 +218,7 @@ Field Descriptions:
 	"loglevel": "DEBUG"
 	--logging level
 }
-
-
+	
 
 Full description - StoryJSON.json 
 
@@ -218,11 +226,11 @@ This file is a standard JSON file containing the fields required by the system i
 
 Authors can create the stories one step at a time, allowing the author the chance to either receive text input from the user, or give the user preset choices to select from that will direct where they go to next within the story.  Authors can also create steps that will simply display it's message and move onto the next step.
 
-Message text can be broken up by inserting \n whenever the author wants a line break.  The messengerapp.py program is designed to break messages into separate parts wherever it find \n, and send each part to the user with a calculated delay based on the reading speed value.
+Message text can be broken up by inserting \n whenever the author wants a line break.  The messengerapp.pi program is designed to break messages into separate parts wherever it find \n, and send each part to the user with a calculated delay based on the reading speed value.
 
 See the stories folder for a valid example file to start with.
 
-Flags and flag values used by the system to denote different response types:
+Flags and flag values used by the system to denote different response type:
 
 ENDRESPONSE = 0 --used to end the story and quit from the application.
 STARTRESPONSE = 1 --used to confirm restarting the story and moving back to the first step, as denoted within the tmasconfig.json file.

@@ -6,6 +6,14 @@ server variables, in preparation for deployment to a proper
 hosting facility.
 2: Update messenger request processing functions, in preparation
 for splitting this off into separate messaging platform apps.
+3: Added multiprocessing functionality for sending messages, which
+allows the main code to continue processing while the send message
+process works through the message list separately.
+4. Added Kik messenger specific fields to the mesappmanagerconfig.json.
+5: Updated story OrchidOfEnduringBeauty.JSON, due to requests from
+the story's subjects.
+6: Changed the name of game.py to bot.py.  
+7. Split the functionality of messengerapp.py into mesappmanager.py and kikmessenger.py.
 
 19/08/2016 - tmas v0.1a
 
