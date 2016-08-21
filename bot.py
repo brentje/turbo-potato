@@ -31,14 +31,11 @@ mesAppManager = MesAppManager('Messenger App')
 
 @app.route('/', methods=['GET'])
 def hello():
-	print 'StoryTellerBot - Visit me on Kik!'
-	
+	return Response(response='StoryTellerBot - Visit me on Kik!' ,status=403)
+
 @app.route('/incoming', methods=['POST'])
 def incoming():
-	print 'Got Here'
-
 	try :
-		print 'Got Here 2'
 		return Response(status=mesAppManager.processRequest(request))
 	except:
 		print 'Error: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1])
