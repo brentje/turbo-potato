@@ -249,7 +249,7 @@ class KikMessenger(object) :
 
             #Check the number of messages that have been sent to this chat ID in the last 30 seconds.
             if not self.checkSentMessageCount(message.chat_id, time.time()) :
-                self.logger.info('Too Many messages sent.  Waiting 10 seconds.  User: {0}'.format(message.from_user))
+                self.logger.warn('Too Many messages sent.  Waiting 10 seconds.  User: {0}'.format(message.from_user))
                 delay = 10
 
             try :
