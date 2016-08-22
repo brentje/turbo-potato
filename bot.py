@@ -20,6 +20,7 @@
 ##
 ##############################################################################
 import sys
+import os
 
 from flask import Flask, request, Response
 
@@ -29,20 +30,24 @@ app = Flask(__name__)
 
 mesAppManager = MesAppManager('Messenger App')
 
+@app.route('/', methods=['GET'])
+def hello():
+	return Response(response='StoryTellerBot - Visit me on Kik!' ,status=200)
+
 @app.route('/incoming', methods=['POST'])
 def incoming():
-	print 'Got Here'
-
 	try :
-		print 'Got Here 2'
 		return Response(status=mesAppManager.processRequest(request))
 	except:
 		print 'Error: {0} - {1}'.format(sys.exc_info()[0], sys.exc_info()[1])
 		return Response(status=403)
 
-    
 
 if __name__ == '__main__':
-    app.run(port=8080, debug=False)
+	if os.environ.get('PORT') :
+		app.run(host='0.0.0.0' ,port=os.environ.get("PORT", 5000), debug=False)
+	else :
+		app.run(port=8080, debug=False)
+    #app.run(port=8080, debug=False)
 
 

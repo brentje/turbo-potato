@@ -62,10 +62,13 @@ class MesAppManager(object) :
     def initLogging(self) :
         try :
             self.logger = logging.getLogger(__name__)
+            ch = logging.StreamHandler()
             handler = logging.handlers.TimedRotatingFileHandler(self._config['logfile'], when='midnight',backupCount=5)
             formatter = logging.Formatter('%(asctime)s|p%(process)s|%(filename)s|ln %(lineno)4s|%(levelname)8s|%(message)s','%m-%d %H:%M:%S')
             handler.setFormatter(formatter)
+            ch.setFormatter(formatter)
             self.logger.addHandler(handler)
+            self.logger.addHandler(ch)
 
             if self._config['loglevel'] == 'DEBUG' :
                 self.logger.setLevel(logging.DEBUG)
@@ -104,7 +107,7 @@ class MesAppManager(object) :
             apikey = ''
             webhook = ''
 
-            if os.environ.get('KIK_USER') and os.environ.get('KIK_API_KEY') and os.environ.get('WEBHOOK'):
+            if os.environ.get('KIK_USER') and os.environ.get('KIK_API_KEY') and os.environ.get('BOT_WEBHOOK'):
                 user = os.environ['KIK_USER']
                 apikey = os.environ['KIK_API_KEY']
                 webhook = os.environ['BOT_WEBHOOK']
@@ -113,7 +116,8 @@ class MesAppManager(object) :
                 apikey = self._config['kikapikey']
                 webhook = self._config['botwebhook']
 
-
+            self.logger.debug('Kik user: {0}, API key: {1}, Webhook: {2}'.format(user,apikey,webhook))
+            
             if (user and apikey and webhook) :
                 self.messengerApps['Kik'] = KikMessenger(self.logger, user, apikey, webhook, self._config['gamename'], self._config['unknownresponsemessage'])
             else :
