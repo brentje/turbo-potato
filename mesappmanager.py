@@ -104,7 +104,7 @@ class MesAppManager(object) :
             apikey = ''
             webhook = ''
 
-            if os.environ.get('KIK_USER') and os.environ.get('KIK_API_KEY') and os.environ.get('WEBHOOK'):
+            if os.environ.get('KIK_USER') and os.environ.get('KIK_API_KEY') and os.environ.get('BOT_WEBHOOK'):
                 user = os.environ['KIK_USER']
                 apikey = os.environ['KIK_API_KEY']
                 webhook = os.environ['BOT_WEBHOOK']
