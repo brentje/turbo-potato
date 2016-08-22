@@ -90,10 +90,13 @@ class StoryController(object) :
     def initLogging(self) :
         try :
             self.logger = logging.getLogger(__name__)
-            handler = logging.handlers.TimedRotatingFileHandler(self._config['logfile'], when='midnight', backupCount=5)
+            ch = logging.StreamHandler()
+            handler = logging.handlers.TimedRotatingFileHandler(self._config['logfile'], when='midnight',backupCount=5)
             formatter = logging.Formatter('%(asctime)s|p%(process)s|%(filename)s|ln %(lineno)4s|%(levelname)8s|%(message)s','%m-%d %H:%M:%S')
             handler.setFormatter(formatter)
+            ch.setFormatter(formatter)
             self.logger.addHandler(handler)
+            self.logger.addHandler(ch)
 
             if self._config['loglevel'] == 'DEBUG' :
                 self.logger.setLevel(logging.DEBUG)
