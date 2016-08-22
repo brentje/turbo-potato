@@ -32,7 +32,7 @@ mesAppManager = MesAppManager('Messenger App')
 
 @app.route('/', methods=['GET'])
 def hello():
-	return Response(response='StoryTellerBot - Visit me on Kik!' ,status=403)
+	return Response(response='StoryTellerBot - Visit me on Kik!' ,status=200)
 
 @app.route('/incoming', methods=['POST'])
 def incoming():
