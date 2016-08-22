@@ -116,7 +116,8 @@ class MesAppManager(object) :
                 apikey = self._config['kikapikey']
                 webhook = self._config['botwebhook']
 
-
+            self.logger.debug('Kik user: {0}, API key: {1}, Webhook: {2}'.format(user,apikey,webhook))
+            
             if (user and apikey and webhook) :
                 self.messengerApps['Kik'] = KikMessenger(self.logger, user, apikey, webhook, self._config['gamename'], self._config['unknownresponsemessage'])
             else :
